@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements</title>
+    <style>
+        h2 {
+            margin: 40px;
+        }
+        body {
+            background-color: #e6e6fa;
+        }
+        #timeLeft {
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+    <script>
+        let timer;
+        let timeLimitInSeconds;
+        let targetTime;
+
+        // Function to start the timer with the user-defined time and date
+        function startTimer() {
+            const inputTime = document.getElementById("timeLimitInput").value;
+            const inputDate = document.getElementById("dateInput").value;
+
+            // Validate the time format (minutes:seconds)
+            const timeParts = inputTime.split(":");
+            if (timeParts.length === 2) {
+                let minutes = parseInt(timeParts[0]);
+                let seconds = parseInt(timeParts[1]);
+
+                if (!isNaN(minutes) && !isNaN(seconds) && minutes >= 0 && seconds >= 0 && seconds < 60) {
+                    // Validate the date format
+                    if (inputDate) {
+                        const currentDate = new Date();
+                        targetTime = new Date(inputDate + " " + inputTime); // Combining the date and time into a full timestamp
+
+                        // If the target time is already in the past, show an error
+                        if (targetTime < currentDate) {
+                            alert("The specified date and time must be in the future.");
+                        } else {
+                            timeLimitInSeconds = Math.floor((targetTime - currentDate) / 1000); // Calculate remaining time in seconds
+                            document.getElementById("timeLeft").innerText = Time left: ${Math.floor(timeLimitInSeconds / 60)}:${timeLimitInSeconds % 60 < 10 ? '0' + timeLimitInSeconds % 60 : timeLimitInSeconds % 60};
+                            timer = setInterval(updateTimeLeft, 1000);
+                            document.getElementById("startBtn").disabled = true; // Disable the start button once the timer is running
+                        }
+                    } else {
+                        alert("Please select a valid date.");
+                    }
+                } else {
+                    alert("Please enter a valid time in minutes:seconds format (e.g., 5:00).");
+                }
+            } else {
+                alert("Please enter a time in the correct format (minutes:seconds).");
+            }
+        }
+
+        // Update the time left and remove content when time is up
+        function updateTimeLeft() {
+            if (timeLimitInSeconds <= 0) {
+                clearInterval(timer);
+                alert("Time is up! The content has been removed.");
+                removeContent();
+                return;
+            }
+            let minutes = Math.floor(timeLimitInSeconds / 60);
+            let seconds = timeLimitInSeconds % 60;
+            document.getElementById("timeLeft").innerText = Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds};
+            timeLimitInSeconds--;
+        }
+
+        // Function to remove content
+        function removeContent() {
+            document.getElementById("lname").value = ""; // Clear the content of the textarea
+            document.getElementById("fileToUpload").value = ""; // Clear the file input
+            document.getElementById("submitBtn").disabled = true; // Disable submit button
+        }
+    </script>
+</head>
+<body>
+  <u><h2><font color="#36454f">ANNOUNCEMENTS</font></h2></u>
+
+  <!-- Date and Time limit input -->
+  <div>
+    <label for="dateInput">Select Date: </label>
+    <input type="date" id="dateInput" required>
+    
+    <label for="timeLimitInput">Set Time Limit (minutes:seconds): </label>
+    <input type="text" id="timeLimitInput" placeholder="e.g., 5:00" required>
+    
+    <button type="button" id="startBtn" onclick="startTimer()">Start Timer</button>
+  </div>
+
+  <!-- Form for uploading an announcement -->
+  <form action="upload.php" method="post" enctype="multipart/form-data">
+      <label for="fileToUpload">Upload Brochure:</label>
+      <input type="file" name="fileToUpload" id="fileToUpload" required>
+
+      <label for="lname">CONTENT</label><br>
+      <textarea cols="100" rows="10" id="lname" name="lname" required></textarea><br><br>
+
+      <!-- Display the time left -->
+      <p id="timeLeft">Time left: --:--</p>
+
+      <!-- Submit button -->
+      <input type="submit" id="submitBtn" value="Upload Announcement">
+  </form> 
+</body>
+</html>

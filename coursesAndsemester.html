@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Course and Semester Subjects</h1>
+    <label for="Bvoc">Bvoc Web Technology
+        <select name="sem" id="Bvoc" onchange="showSubjects('Bvoc')">
+            <option value="" disabled selected>Select Semester</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+    </label>
+    <br><br>
+    <label for="BSC">BSc Computer Science
+        <select name="sem" id="BSC" onchange="showSubjects('BSC')">
+            <option value="" disabled selected>Select Semester</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+    </label>
+    <br><br>
+    <label for="MSC">MSc Computer Science
+        <select name="sem" id="MSC" onchange="showSubjects('MSC')">
+            <option value="" disabled selected>Select Semester</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+    </label>
+    <br><br>
+
+    <!-- Sections for Subjects -->
+    <div id="Bvoc-sem-1" class="section">
+        <h3>Bvoc Semester 1 Subjects</h3>
+        <ul>
+            <a href="year1.html"><li>ENGLISH A01</li></a>
+            <a href=""><li>ENGLISH A02</li></a>
+            <a href=""><li>COMPUTER FUNDAMENTALS</li></a>
+            <a href=""><li>MALAYALAM A07</li></a>
+            <a href=""><li>HINDI A07</li></a>
+            <a href=""><li>INTRODUCTION TO ADOBE ILLUSTRATOR & PHOTOSHOP</li></a>
+            <a href=""><LI>BASICS OF HTML</LI></a>
+            <a href=""><LI>GRAPHICS LAB</LI></a>
+            <a href=""><LI>HTML LAB</LI></a>
+        </ul>
+    </div>
+    <div id="Bvoc-sem-2" class="section">
+        <h3>Bvoc Semester 2 Subjects</h3>
+        <ul>
+            <a href=""><li>ENGLISH A03</li></a>
+            <a href=""><li>ENGLISH A04</li></a>
+            <a href=""><li>HINDI A08</li></a>
+            <a href=""><li>MALAYALAM A08</li></a>
+            <a href=""><li>THEORY OF DOMAIN HOSTING</li></a>
+            <a href=""><li>INTRODUCTION TO BOOTSTRAP</li></a>
+            <a href=""><LI>ADVANCED HTML & CSS</LI></a>
+            <a href=""><LI>ADVANCED HTML & BOOTSTRAP LAB</LI></a>
+            <a href=""><LI>MINI PROJECT/INTERNSHIP</LI></a>
+        </ul>
+    </div>
+    <div id="Bvoc-sem-3" class="section">
+        <h3>Bvoc Semester 3 Subjects</h3>
+        <ul>
+            <a href=""><li>RDBMS USING MYSQL</li></a>
+            <a href=""><li>BASIC MATHEMATICS FOR COMPETATIVE EXAMS</li></a>
+            <a href=""><li>BETTER SKILLS FOR BUISNESS AND PROFESSION</li></a>
+            <a href=""><li>THEORY OF VERSION CONTROL</li></a>
+            <a href=""><li>WEB PROGRAMMING USING PHP</li></a>
+            <a href=""><li>CLIENT SIDE SCRIPTING USING JAVA SCCRIPT</li></a>
+            <a href=""><LI>PHP LAB</LI></a>
+            <a href=""><LI>SQL LAB</LI></a>
+        </ul>
+    </div>
+    <div id="Bvoc-sem-4" class="section">
+        <h3>Bvoc Semester 4 Subjects</h3>
+        <ul>
+           <a href=""> <li>ENTERPRENEURSHIP DEVELOPMENT</li></a>
+            <a href=""><li>HEAILTH AND SAFETY AT WORKPLACE</li></a>
+            <a href=""><li>INTRODUCTION TO XML</li></a>
+            <a href=""><li>FUNDAMENTALS OF AUDIO,VIDEO AND MULTIMEDIA</li></a>
+           <a href=""> <li>SCRIPTING USING PYTHON</li></a>
+           <a href=""> <li>WEB SERVER PROGRAMMING USING DJANGO</li></a>
+            <a href=""><LI>PYTHON SCRIPTING LAB</LI></a>
+            <a href=""><LI>MINI PROJECT/INTERNSHIP</LI></a>
+        </ul>
+    </div>
+    <div id="Bvoc-sem-5" class="section">
+        <h3>Bvoc Semester 5 Subjects</h3>
+        <ul>
+           <a href=""> <li>INTRODUCTION TO SEARCH ENGINE OPTIMIZATION</li></a>
+            <a href=""><li>QUALITY ASSURANCE IN SOFTWARE</li></a>
+            <a href=""><li>CONTENT MANGEMENT SYSTEM</li></a>
+            <a href=""><li>INTRODUCTION TO CROSS PLATFORM WEBSITE APPLICATIONS</li></a>
+            <a href=""><li>Software Engineering</li></a>
+           <a href=""> <li>RUBY ON RAILS</li></a>
+            <a href=""><LI>CROSS PLATFORM WEBSITE LAB</LI></a>
+            <a href=""><LI>RUBY LAB</LI></a>
+            <a href=""><LI>CONTENT MANAGEMENT SYSTEM LAB</LI></a>
+        </ul>
+    </div>
+    <div id="Bvoc-sem-6" class="section">
+        <h3>Bvoc Semester 6 Subjects</h3>
+        <ul>
+            <li>INTERNSHIP AND PROJECT INTERNSHIP</li>
+            <li>TERM PAPER</li>
+            
+        </ul>
+    </div>
+
+    <!-- Add similar sections for BSc and MSc -->
+    <div id="BSC-sem-1" class="section">
+        <h3>BSc Semester 1 Subjects</h3>
+        <ul>
+            <li>Introduction to Programming</li>
+            <li>Discrete Mathematics</li>
+            <li>Digital Logic Design</li>
+            <li>English for Science</li>
+            <li>Physics for Computing</li>
+            <li>Environmental Studies</li>
+        </ul>
+    </div>
+    <div id="MSC-sem-1" class="section">
+        <h3>MSc Semester 1 Subjects</h3>
+        <ul>
+            <li>Advanced Algorithms</li>
+            <li>Machine Learning Basics</li>
+            <li>Research Methodology</li>
+            <li>Advanced Database Management Systems</li>
+            <li>Cloud Computing</li>
+            <li>Artificial Intelligence</li>
+        </ul>
+    </div>
+    <script>
+        function showSubjects(course) {
+            // Hide all sections
+            const allSections = document.querySelectorAll('.section');
+            allSections.forEach(section => section.style.display = 'none');
+
+            // Get the selected semester
+            const selectedSemester = document.getElementById(course).value;
+
+            // Display the corresponding section
+            const sectionToShow = document.getElementById(`${course}-sem-${selectedSemester}`);
+            if (sectionToShow) {
+                sectionToShow.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

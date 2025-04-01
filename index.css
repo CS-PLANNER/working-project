@@ -1,0 +1,73 @@
+
+        
+       
+        .section {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        .section h3 {
+            margin: 0 0 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+
+        
+        #indexnav {
+        overflow: hidden;
+        background-color: #8f5aa8;
+      }
+      
+     #indexnav a {
+        float: left;
+        font-size: 16px;
+        color:white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        
+      }
+      .index{
+        text-align: center;
+        background-color: #a34aa0;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        margin-left: 5px;
+        margin-top: 10px;
+        color:  #faf8fc;
+        font-size: x-large;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      
+      }
+      #logout{
+        float: right;
+        width: 60px;
+        background-color: #90258c;
+        margin: 12px;
+        color: white;
+      }
+      img{
+      padding-right: 2px;
+     }
+
+
+
+
+        body {
+            background-color: hsl(258, 82%, 94%); /* Rosy Pink */
+            color: #4A235A; /* Deep Purple for contrast */
+            font-family: Arial, sans-serif;
+        }
+
+
+        h2 {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: #4e2c6f; /* Darker Pink */
+        }

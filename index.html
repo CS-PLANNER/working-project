@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="index">
+        <img id="logo" src="vimala logo.jfif" alt="logo" width="23px" height="23px">
+          <img id="logo1" src="logo.jpeg" alt="vimala" width="23px" height="23px">CS DEPARTMENT PLANNER
+      </header>
+      <div class="navbar" id="indexnav">
+        <a href="#" onclick="navigateTo('announcements')">Announcements</a>
+        <a href="#" onclick="navigateTo('programs conducted')">Programs Conducted</a>
+        <a href="#" onclick="navigateTo('coursesAndsemester')">Courses And semester</a>
+        <button onclick="submit" id="logout">LogOut</button>
+      </div>
+
+      <section id="content">
+        <!-- Content will be loaded dynamically here -->
+    </section>
+    
+    <script>
+        // JavaScript code to handle navigation and content loading
+        function navigateTo(page) {
+            fetchPage(page + '.html');
+        }
+        function fetchPage(page) {
+            fetch(page)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('content').innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching page:', error));
+        }
+    
+        // Load the default page
+        navigateTo('announcements');
+    
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script> 
+</body>
+</html>

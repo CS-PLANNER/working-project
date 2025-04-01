@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="log.css">
+</head>
+<body>
+
+    <div class="underlay-photo"></div>
+    <div class="underlay-black"></div>
+
+    <form class="login-form" action="adminpage.html" id="form">
+       
+        <!-- White Background Strip for Logos -->
+        <div class="logo-strip">
+            <img src="logo.png.jpeg" class="logo-img" alt="Logo 1">
+            <img src="vimala logo.jfif" class="logo-img" alt="Logo 2">
+        </div>
+
+       
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="login-username" name="username" placeholder="username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="login-password" name="password" placeholder="Password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="role">Role:</label>
+            <select id="role" name="role">
+                <option value="admin">Admin</option>
+                <option value="admin">Coordinator</option>
+                <option value="student">Student</option>
+                <option value="faculty">Faculty</option>
+              </select>
+        </div>
+
+        <input type="submit" name="Login" value="Login" class="login-submit" />
+    </form>
+
+</body>
+<script src="login.js"></script>
+</html>
