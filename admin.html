@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="logo-strip">
+            <img src="logo.png.jpeg" class="logo-img" alt="Logo 1">
+            <img src="vimala logo.jfif" class="logo-img" alt="Logo 2">CS Department Planner
+            <button onclick="logout()">Logout</button>
+        </div>
+        <h1>Admin Dashboard</h1>
+         <ul>
+            <li><a href="student.html">Add and View Students</a></li>
+            <li><a href="faculty.html">Add and View Faculty</a></li>
+        </ul> 
+        <a href="#"> <img id="images" src="1.png" alt=""></a>
+        <a href="#"> <img id="images" src="2.png" alt=""></a>
+    </div>
+        <div class="underlay-photo"></div>
+        <div class="underlay-black"></div> 
+        <script>
+            function logout() {
+                if (confirm("Are you sure you want to logout?")) {
+                    window.location.href = "login.html";
+                }
+            }
+        </script>
+  
+</body>
+</html>

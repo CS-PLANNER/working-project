@@ -1,0 +1,98 @@
+
+    body, html {
+  height: 100%;
+}
+body {
+  font-family: 'Open Sans';
+  font-weight: 100;
+  display: flex;
+  overflow: hidden;
+justify-content: center;
+align-items: center;
+          
+}
+
+[class*=underlay] {
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+}
+.underlay-photo {
+  animation: hue-rotate 6s infinite;
+  background: url('https://31.media.tumblr.com/41c01e3f366d61793e5a3df70e46b462/tumblr_n4vc8sDHsd1st5lhmo1_1280.jpg');
+  background-size: cover;
+  -webkit-filter: grayscale(70%);
+  z-index: -1;
+}
+.underlay-black {
+  background: rgba(38, 36, 36, 0.7);
+  z-index: -1;
+}
+
+@keyframes hue-rotate {
+  from {
+    -webkit-filter: grayscale(30%) hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: grayscale(30%) hue-rotate(360deg);
+  }
+}
+.container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: aliceblue;
+            margin-top: -60px;
+        }
+        .container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .container ul li {
+            margin: 10px 0;
+        }
+        .container ul li a {
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 27px;
+        }
+        #images{
+            width: 300px;
+            height: 400px;
+            padding: 10px;
+        }
+
+        .logo-strip {
+        background: white;
+        padding: 10px 20px;
+        width: 85%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border-radius: 8px;
+        margin: 0 auto 20px;
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #2B1B17;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+
+
+/* Logo Images */
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+h1{
+    font-size: 40px;
+}

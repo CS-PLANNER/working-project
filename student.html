@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        
+  .index{
+    text-align: center;
+    background-color: #FFDEE9;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 10px;
+    color:  #462B66;
+    font-size: x-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex; /* Flexbox for row layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    position: relative;
+  }
+
+  #logout{
+    background-color: #f0a3ed;
+            width: 80px;
+            border: none;
+            padding: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            position: absolute; /* Move to the right */
+            right: 10px; /* Distance from the right edge */
+            top: 50%;
+            transform: translateY(-50%);
+  }
+
+ img{
+  padding-right: 2px;
+ }
+
+
+body{
+    background-color: #FFDEE9;
+background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+
+ height: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+input, select, button {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #45a049;
+}
+#logo{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding-right: 10px;
+   
+}
+
+    </style>
+</head>
+<body>
+    <header class="index">
+        <img id="logo" src="vimala logo.jfif" alt="logo" width="35px" height="35px">
+        <img id="logo" src="logo.png.jpeg" alt="vimala" width="35px" height="35px">
+         CS DEPARTMENT PLANNER
+        <button id="logout" onclick="logout()">Logout</button>
+    </header>
+
+    <h2>Add Students</h2>
+    <form id="addStudentForm" action="std.php" method="post">
+        <label for="department">Select Department</label>
+        <select id="department" name="department" required>
+            <option value="Bvoc Web Technology">BVOC Web Technology</option>
+            <option value="BSC Computer Science">BSC Computer Science</option>
+            <option value="MSC Computer Science">MSC Computer Science</option>
+        </select>
+
+        <label for="year">Select Year</label>
+        <select id="year" name="year" required>
+            <option value="1">Year 1</option>
+            <option value="2">Year 2</option>
+            <option value="3">Year 3</option>
+        </select>
+
+        <label for="regNo">Register Number</label>
+        <input type="text" id="regNo" name="regNo" placeholder="Enter Register Number" required>
+
+        <label for="studentName">Student Name</label>
+        <input type="text" id="studentName" name="studentName" placeholder="Enter Student Name" required>
+
+        <button type="submit" id="formbtn">Add Student</button>
+    </form>
+    <br>
+    <h2>View Student List</h2>
+    <form id="viewStudentForm" action="viewstd.php" method="post">
+        <label for="department">Select Department</label>
+        <select id="department" name="department" required>
+            <option value="Bvoc Web Technology">BVOC Web Technology</option>
+            <option value="BSC Computer Science">BSC Computer Science</option>
+            <option value="MSC Computer Science">MSC Computer Science</option>
+        </select>
+
+        <label for="year">Select Year</label>
+        <select id="year" name="year" required>
+            <option value="1">Year 1</option>
+            <option value="2">Year 2</option>
+            <option value="3">Year 3</option>
+        </select>
+        <button type="submit" id="formbtn">View Students</button>
+    </form>
+    <script>
+        function logout() {
+            if (confirm("Are you sure you want to logout?")) {
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+</body>
+</html> 
